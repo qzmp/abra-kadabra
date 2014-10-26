@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PScript : MonoBehaviour
+public class pScript : MonoBehaviour
 {
     public Vector2 speed = new Vector2(50, 50);
 
