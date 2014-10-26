@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+<<<<<<< HEAD
 public class SuperPlayerScript : MonoBehaviour
+=======
+public class PScript : MonoBehaviour
+>>>>>>> origin/master
 {
     public Vector2 speed = new Vector2(50, 50);
 
