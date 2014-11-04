@@ -4,6 +4,7 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour
 {
+
     public Vector2 speed = new Vector2(50, 50);
 
     private Vector2 movement;
