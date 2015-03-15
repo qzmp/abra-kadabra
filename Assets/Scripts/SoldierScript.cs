@@ -20,8 +20,8 @@ public class SoldierScript : MonoBehaviour {
 
 	void Start()
 	{
-		distToGround = collider2D.bounds.extents.y;
-		distToEdge = collider2D.bounds.extents.x;
+		distToGround = GetComponent<Collider2D>().bounds.extents.y;
+		distToEdge = GetComponent<Collider2D>().bounds.extents.x;
 
 		anim = GetComponent<Animator> ();
 
@@ -38,14 +38,14 @@ public class SoldierScript : MonoBehaviour {
 			direction = -direction;
 			anim.SetBool("facingRight",!anim.GetBool("facingRight"));
 		}
-        movement = new Vector2(speed.x * direction, rigidbody2D.velocity.y);
+        movement = new Vector2(speed.x * direction, GetComponent<Rigidbody2D>().velocity.y);
 		anim.SetFloat ("speed", Mathf.Abs(speed.x));
 
     }
 
     void FixedUpdate()
     {
-        rigidbody2D.velocity = movement;
+        GetComponent<Rigidbody2D>().velocity = movement;
     }
 
     bool isGrounded() 
